@@ -26,26 +26,6 @@
 // }
 
 
-// input.addEventListener('blur', onImputBlur);
-// function onImputBlur(e) {
-//     if (e.currentTarget.value.lenght === Number(input.dataset.length)) {
-//         input.classList = 'valid';
-//    } else input.classList = 'invalid';
-// }
-// , e => {
-//     e.preventDefault();
-//     console.log(e.currentTarget.value);
-//     const val = e.currentTarget.value;
-//     if (e.currentTarget.value.lenght >= dataLength) {
-//         e.currentTarget.classList.add("valid");
-//         e.currentTarget.classList.remove('invalid');
-//     }
-//         else {
-//         e.currentTarget.classList.add("invalid");
-//         e.currentTarget.classList.remove('valid');
-//         }
-// })
-
 const input = document.getElementById("validation-input");
 
 input.addEventListener('blur', imputBlur);
