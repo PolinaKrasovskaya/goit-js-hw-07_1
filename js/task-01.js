@@ -10,12 +10,12 @@
 // Количество элементов: 4
 
 
-const listRef = document.querySelector('#categories');
-const listItemsRef = document.querySelectorAll('.item');
+const listRef = document.querySelectorAll('.item');
+console.log(`В списке ${listRef.length} категорий`);
 
-console.log(`В списке ${listItemsRef.length} категории.`);
+listRef.forEach(element => {
+    console.log(`Категория: ${element.firstElementChild.textContent}`);
+    console.log(`Количество элементов: ${element.lastElementChild.children.length}`)
+});
 
-listItemsRef.forEach(element => {
-    console.log(`Категория ${element.firstElementChild.textContent}`);
-    console.log(`Количество элементов ${element.lastElementChild.children.length}`)
-})
+
