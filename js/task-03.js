@@ -27,20 +27,12 @@ const images = [
   ];
 
 
-  // const galleryRef = document.querySelector('#gallery');
+  const galleryRef = document.querySelector('#gallery');
 
-  // const galleryEl = images.map((image) => {
-  //   const liEl = document.createElement('li');
-  //   const imageEl = document.createElement('img');
-  //   console.log(liEl);
-  //   console.log(imageEl);
-  //   liEl.append(imageEl);
-  //   .insertAdjacentHTML('afterbegin' <img)
+  const items = images.map(image => {
+    galleryRef.insertAdjacentHTML('afterbegin', `<li><img src="${image.url}" alt="${image.alt}" width=500></li>`)
+  });
 
-  //   return liEl;
+  galleryRef.style.listStyle = 'none';
 
-
-  // })
-  // liEl.append(imageEl);
-
-  // .insertAdjacentHTML('afterbegin', imagesRef);
+  console.log(galleryRef)
