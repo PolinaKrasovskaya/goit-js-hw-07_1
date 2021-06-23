@@ -32,10 +32,13 @@ input.addEventListener('blur', imputBlur);
 
 function imputBlur(e) {
     if (e.currentTarget.value.length === Number(input.dataset.length)) {
-        input.classList.add("valid");
-        input.classList.remove('invalid');
-        } else {
-            input.classList.remove("valid");
-            input.classList.add('invalid');
-        }
-    };
+        validClass('valid', 'invalid');
+    } else {
+        validClass('invalid', 'valid');
+    }
+};
+
+function validClass(addClass, removeClass) {
+    input.classList.remove(removeClass);
+    input.classList.add(addClass);
+}

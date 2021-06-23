@@ -30,9 +30,12 @@ const images = [
   const galleryRef = document.querySelector('#gallery');
 
   const items = images.map(image => {
-    galleryRef.insertAdjacentHTML('afterbegin', `<li><img src="${image.url}" alt="${image.alt}" width=500></li>`)
+    return `<li><img src="${image.url}" alt="${image.alt}" width=500></li>`;
   });
+
+  galleryRef.insertAdjacentHTML('afterbegin', items.join(''));
 
   galleryRef.style.listStyle = 'none';
 
   console.log(galleryRef)
+
